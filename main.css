@@ -37,15 +37,30 @@ nav .alink:hover {
 }
 nav img {
   width: 200px;
+  height: 60px;
 }
 nav .links {
   display: flex;
   align-items: center;
   gap: 18px;
 }
+nav .mob-links {
+  display: none;
+}
 nav h1 {
   color: #4D4D4D;
   font-size: 26px;
+}
+@media screen and (max-width: 1024px) {
+  nav .links {
+    display: none;
+  }
+  nav .mob-links {
+    display: block;
+  }
+  nav .mob-links i {
+    font-size: 28px;
+  }
 }
 
 .banner {
@@ -59,7 +74,7 @@ nav h1 {
   font-size: 48px;
 }
 .banner .text h1 span {
-  color: #4CAF4F;
+  color: #ec0000;
 }
 .banner .text p {
   margin: 5px 0;
@@ -76,6 +91,23 @@ nav h1 {
 .banner .banner-img img {
   object-fit: contain;
   max-height: 300px;
+}
+@media screen and (max-width: 1024px) {
+  .banner {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 10px 5px;
+    gap: 10px;
+  }
+  .banner .text h1 {
+    font-size: 32px;
+  }
+  .banner .banner-img {
+    margin-top: 10px;
+  }
+  .banner .banner-img img {
+    width: 90%;
+  }
 }
 
 .content {
@@ -156,12 +188,71 @@ nav h1 {
 .content .social .soc-cont .text p {
   font-size: 24px;
 }
+@media screen and (max-width: 1024px) {
+  .content .about h1 {
+    font-size: 28px;
+  }
+  .content .about .abt2 {
+    font-size: 16px;
+    padding: 0 1%;
+  }
+  .content .mob .cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+  .content .mob .cards .card {
+    padding: 5px 15px;
+    max-width: 500px;
+    box-shadow: 5px 3px #e1a0a0;
+  }
+  .content .mob .cards .card img {
+    max-width: 500px;
+  }
+  .content .mob .cards .card h2 {
+    font-size: 18px;
+  }
+  .content .social h1 {
+    font-size: 28px;
+  }
+  .content .social .soc-cont {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .content .social .soc-cont div img {
+    max-height: 200px;
+  }
+  .content .social .soc-cont .text {
+    align-items: center;
+  }
+  .content .social .soc-cont .text h2 {
+    font-size: 20px;
+  }
+  .content .social .soc-cont .text p {
+    font-size: 16px;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 576px) {
+  .content .mob .cards .card h2 {
+    text-align: center;
+  }
+}
 
 .sponsors .cards {
-  grid-template-columns: 1fr;
+  display: flex;
 }
 .sponsors .cards .card {
   box-shadow: none;
+}
+.sponsors .cards .card img {
+  max-width: 200px;
+}
+.sponsors .cards .card h2 {
+  font-size: 16px;
 }
 
 .eligibilty {
@@ -187,6 +278,21 @@ nav h1 {
 }
 .eligibilty .eligible .content {
   font-size: 18px;
+}
+@media screen and (max-width: 1024px) {
+  .eligibilty h1 {
+    font-size: 28px;
+  }
+  .eligibilty .eligible {
+    justify-content: center;
+  }
+  .eligibilty .eligible .img-cont img {
+    max-width: 200px;
+    max-height: 250px;
+  }
+  .eligibilty .eligible .content {
+    font-size: 16px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
